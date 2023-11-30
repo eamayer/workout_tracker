@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+    <title>UI Database</title>
+</head>
+
+<body>
+<form id="addNewExercise">
+    <fieldset>
+        <legend>Add New Exercise:</legend>
+        <div class = "form-field">
+        <label>Name:
+            <input type="text" id="name" name = "name" required>
+        </label>
+        </div>
+        <br />
+        <div class="form-field">
+        <label>reps:
+            <input type="number" id="reps" name = "reps" required>
+        </label>
+        </div>
+        <br />
+        <div class="form-field">
+        <label>weight
+            <input type="number" id="weight" name = "weight" required>
+        </label>
+        </div>
+
+        <br />
+        <div class="form-field">
+        <label>units
+            <input type="radio" id="kgs" name="units" value=0>
+            <label for="kgs">Kgs</label><br>
+            <input type="radio" id="lbs" name="units" value=1>
+            <label for="lbs">Lbs</label><br>
+        </label>
+        </div>
+
+        <br />
+        <label>date
+            <input type="date" id="date" name = "date" required>
+        </label>
+        <br />
+                <input type="submit" value="Add New Row" id="submitInfo">
+    </fieldset>
+</form>
+
+
+<!--form to pop up when user edits an existing row-->
+<form id = "editTable">
+    <fieldset>
+        <legend>Update the information:</legend>
+        <label>
+            <input type="number" id="editRowID" style="display: none">
+        </label>
+        <label>Name:
+            <input type="text" id="editName" required>
+        </label>
+        <br />
+        <label>reps:
+            <input type="number" id="editReps" required>
+        </label>
+        <br />
+        <label>weight
+            <input type="number" id="editWeight" required>
+        </label>
+        <br />
+        <label>units
+            <input type="radio" id="editKgs" name="editUnits" value=0>
+            <label for="editKgs">Kgs</label><br>
+            <input type="radio" id="editLbs" name="editUnits" value=1>
+            <label for="editLbs">Lbs</label><br>
+        </label>
+        <br />
+        <label>date
+            <input type="date" id="editDate" required>
+        </label>
+        <br />
+            <input type="submit" value="Edit Info" id="editInfo">
+    </fieldset>
+</form>
+
+<div id = "theTable">
+    <h1>Table of data</h1>
+    <table id="workoutTable">
+        <thead>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+
+<script src="javascripts/client.js"></script>
+</body>
+
+</html>
